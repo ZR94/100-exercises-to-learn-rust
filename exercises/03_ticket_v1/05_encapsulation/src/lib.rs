@@ -1,4 +1,6 @@
 pub mod ticket {
+    use std::string;
+
     pub struct Ticket {
         title: String,
         description: String,
@@ -28,6 +30,18 @@ pub mod ticket {
                 description,
                 status,
             }
+        }
+
+        pub fn title(&self) -> &str {
+            &self.title
+        }
+
+        pub fn description(&self) -> &str {
+            &self.description
+        }
+        
+        pub fn status(&self) -> &str {
+            &self.status
         }
 
         // TODO: Add three public methods to the `Ticket` struct:
